@@ -2,9 +2,8 @@
 
 
 def uppercase(str):
-    cap = ord('A') - ord('a')
-    lis = list(str)
-    for x, y in enumerate(str):
-        if (ord(y) in range(ord('a'), ord('z')+1)):
-            lis[x] = chr(ord(y) + cap)
-        print("".join(lis).format())
+    for i in str:
+        if ord(i) >= ord('a') and ord(i) <= ord('z'):
+            i = chr(ord(i) - 32)
+        print("{:s}".format(i), end="")
+    print()
