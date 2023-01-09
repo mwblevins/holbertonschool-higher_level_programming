@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-for letter_code in range(ord('a'), ord('z')+1):
-    letter = chr(letter_code)
-    if letter not in "qe":
-        print(letter, end="")
+for x in range(ord('a'), ord('z')+1):
+    if (x != ord('e') and x != ord('q')):
+        print(chr(x).format(), end="")
