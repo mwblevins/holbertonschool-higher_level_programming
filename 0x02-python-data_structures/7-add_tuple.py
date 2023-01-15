@@ -3,7 +3,7 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     val_a = [0, 0]
-    val_b  = [0, 0]
+    val_b = [0, 0]
     for i in range(0, 2):
         if (len(tuple_a) > i):
             val_a[i] = tuple_a[i]
