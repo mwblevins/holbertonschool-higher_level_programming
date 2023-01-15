@@ -2,6 +2,7 @@
 
 
 def no_c(my_string):
-    new = my_string
-    print(my_string.translate({ord('c'): None}), {ord('C'): None})
-    return new
+    _list = [char for char in my_string if char != 'c']
+    _list = [char for char in _list if char != 'C']
+    my_string = "".join(_list)
+    return my_string
