@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Class documentation
-"""
+"""this is a square"""
 
 
 class Square:
     """Class that represents a square
     """
-    def __init__(self, size=0):
+    def __init__(self, size):
         """init method
 
         Args:
