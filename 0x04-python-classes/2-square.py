@@ -19,5 +19,5 @@ def __init__(self, size=0):
 """Return area of a square"""
 
 
-def area(self):
-    return (self.__size * self.__size)
+def area(self) -> int:
+    return self.__size ** 2
