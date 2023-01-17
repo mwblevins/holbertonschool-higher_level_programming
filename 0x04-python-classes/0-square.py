@@ -2,6 +2,7 @@
 """Square Project for Holberton
 
 Is a Module that contains a class that is a Square.
+
 """
 
 
