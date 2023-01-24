@@ -1,0 +1,41 @@
+this is for add integer
+
+Adds two ints and returns the sum
+
+Import function:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Uses:
+
+Passes two ints:
+
+>>> add_integer(1, 2)
+3
+
+Passes two floats:
+
+>>> add_integer(1.2, 2.2)
+3
+
+Passing only one:
+
+>>> add_integer(1)
+99
+
+a is neither int nor float:
+
+>>> add_integer("one", 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+b is neither int nor float:
+
+>>> add_integer(1, "two")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+No args:
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
