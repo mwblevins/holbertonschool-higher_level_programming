@@ -2,7 +2,7 @@
 """Inheritance"""
 
 
-class Mylist(list):
+class MyList(list):
     """inheritance task one"""
     def print_sorted(self):
         _t = self[:]
