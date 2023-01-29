@@ -3,8 +3,8 @@
 
 
 class Mylist(list):
-    """inheritance"""
+    """inheritance task one"""
     def print_sorted(self):
-        _i = self[:]
-        _i.sort()
-        print(_i)
+        _t = self[:]
+        _t.sort()
+        print(_t)
