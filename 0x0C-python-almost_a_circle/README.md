@@ -1,0 +1,1 @@
+Readme for almost a circle. Prepper for first Airbnb clone project
