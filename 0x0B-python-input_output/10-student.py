@@ -15,7 +15,9 @@ class Student:
         if attrs is None:
             return (vars(self))
         ats = {}
-        for key, value in vars(self).items():
-            if key in ats:
-                ats[key] = value
+        for i in attrs:
+            try:
+                ats[i] = vars(self)[i]
+            except:
+                Exception
         return (ats)
