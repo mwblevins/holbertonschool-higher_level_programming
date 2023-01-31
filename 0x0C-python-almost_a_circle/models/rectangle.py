@@ -80,10 +80,16 @@ class Rectangle(Base):
         return strrect
 
     def update(self, *args, **kwargs):
-        "updates"
-        if args:
-            attribs = ["id", "width", "height", "x", "y"]
-            for xi in range(len(args)):
-                setattr(self, attribs[xi], args[xi])
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+        """Updates"""
+        if (args is None or args == ()) and kwargs is not None:
+            args = [kwargs.get("id"), kwargs.get("width"),
+                    kwargs.get("height"), kwargs.get("x"),
+                    kwargs.get("y")]
+        try:
+            self.id = args[0] or self.id
+            self.width = args[1] or self.width
+            self.height = args[2] or self.height
+            self.x = args[3] or self.x
+            self.y = args[4] or self.y
+        except IndexError:
+            return
