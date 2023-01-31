@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ BASE TESTING"""
 import unittest
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBAse(unittest.TestCase):
