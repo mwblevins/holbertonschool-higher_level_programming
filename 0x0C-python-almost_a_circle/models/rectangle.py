@@ -70,7 +70,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Override"""
-        rect += "[Rectangle] " + "({}) ".format(self.id)
-        rect += "{}/{} - ".format(self.x, self.y)
-        rect += "{}/{}".format(self.width, self.height)
-        return rect
+        strrect = "[Rectangle] " + "({}) ".format(self.id)
+        strrect += "{}/{} - ".format(self.x, self.y)
+        strrect += "{}/{}".format(self.width, self.height)
+        return strrect
