@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""unit tests for rectangle.py"""
+"""unit tests for rectangle.py going crazy"""
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
