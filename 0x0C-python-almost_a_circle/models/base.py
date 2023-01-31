@@ -3,7 +3,7 @@
 import json
 
 
-class Base():
+class Base:
     """First class known as Base"""
     __nb_objects = 0
 
