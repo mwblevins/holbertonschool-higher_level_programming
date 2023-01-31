@@ -42,7 +42,7 @@ class TestRect(unittest.TestCase):
             print(Rectangle(1, 1, 1, 1, 1).__id)
 
     def test_richard(self):
-        rekt1 = Rectangle(1, 1, 1, 1 ,1)
+        rekt1 = Rectangle(1, 1, 1, 1, 1)
         richard = {"id": 1, "width": 1, "height": 1, "x": 1, "y": 1}
         dick = rekt1.to_dictionary()
         self.assertEqual(richard, dick)
@@ -295,7 +295,7 @@ class TestRect(unittest.TestCase):
 
     def test_str_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(2, 2, 2,"UWU")
+            Rectangle(2, 2, 2, "UWU")
 
     def test_boo_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):

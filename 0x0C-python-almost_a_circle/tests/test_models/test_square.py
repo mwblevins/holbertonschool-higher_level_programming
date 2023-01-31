@@ -108,7 +108,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sqr1.height, sqr1.size)
 
     def test_richard(self):
-        sqr1 = Square(1, 1, 1 ,1)
+        sqr1 = Square(1, 1, 1, 1)
         richard = {"id": 1, "size": 1, "x": 1, "y": 1}
         dick = sqr1.to_dictionary()
         self.assertEqual(richard, dick)
@@ -271,7 +271,7 @@ class TestSquare(unittest.TestCase):
 
     def test_str_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Square(2, 2,"UWU")
+            Square(2, 2, "UWU")
 
     def test_boo_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
