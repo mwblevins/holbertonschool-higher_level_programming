@@ -93,3 +93,8 @@ class Rectangle(Base):
             self.y = args[4] or self.y
         except IndexError:
             return
+
+    def to_dictionary(self):
+        """Turn this rect into a dict"""
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}

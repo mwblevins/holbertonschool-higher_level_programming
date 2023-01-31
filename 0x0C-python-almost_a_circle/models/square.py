@@ -24,7 +24,7 @@ class Square(Rectangle):
                  self.y, self.size]
         res = "[{0}] ({1}) {2}/{3} - {4}".format(*sects)
         return res
-    
+
     def update(self, *args, **kwargs):
         """Quick Update"""
         if (args is None or args == ()) and kwargs is not None:
@@ -37,3 +37,8 @@ class Square(Rectangle):
             self.y = args[3] or self.y
         except IndexError:
             return
+
+    def to_dictionary(self):
+        """Turn this rect into a dict"""
+        return {"id": self.id, "size": self.size,
+                "x": self.x, "y": self.y}
