@@ -16,7 +16,7 @@ class Base():
 
 
 @staticmethod
-def to_json_string(list_dictionaries=[]):
+def to_json_string(list_dictionaries):
     """Json strings"""
     if list_dictionaries is None or list_dictionaries == []:
         return "[]"
