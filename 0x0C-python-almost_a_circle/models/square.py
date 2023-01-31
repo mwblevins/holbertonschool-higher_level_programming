@@ -24,3 +24,16 @@ class Square(Rectangle):
                  self.y, self.size]
         res = "[{0}] ({1}) {2}/{3} - {4}".format(*sects)
         return res
+    
+    def update(self, *args, **kwargs):
+        """Quick Update"""
+        if (args is None or args == ()) and kwargs is not None:
+            args = [kwargs.get("id"), kwargs.get("size"), kwargs.get("x"),
+                    kwargs.get("y")]
+        try:
+            self.id = args[0] or self.id
+            self.size = args[1] or self.size
+            self.x = args[2] or self.x
+            self.y = args[3] or self.y
+        except IndexError:
+            return
