@@ -15,15 +15,12 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        self.validate("width", value)
         self.width = value
         self.height = value
 
     def __str__(self):
         """Returns str representation of Square"""
-        return '[Square] ({}) {}/{} - {}'.format(
-            self.id,
-            self.x,
-            self.y,
-            self.width
-        )
+        sects = [type(self).__name__, self.id, self.x,
+                 self.y, self.size]
+        res = "[{0}] ({1}) {2}/{3} - {4}".format(*sects)
+        return res
