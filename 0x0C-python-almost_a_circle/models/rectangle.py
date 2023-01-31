@@ -66,9 +66,11 @@ class Rectangle(Base):
 
     def display(self):
         """Prints the rectangle"""
-        print('\n'.join([' ' * self.x + '#' * self.width
-                        for _ in range(self.height)]))
-        print('\n' * self.y)
+        row = ' ' * self.x + '#' * self.width
+        for i in range(self.height):
+            print(row)
+        for i in range(self.y):
+            print()
 
     def __str__(self):
         """Override"""
