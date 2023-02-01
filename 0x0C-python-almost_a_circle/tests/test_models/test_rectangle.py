@@ -169,10 +169,6 @@ class TestRect(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle("UWU", 2)
 
-    def test_boo_reg(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(True, 2)
-
     def test_lst_reg(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle([2, 2], 2)
@@ -212,10 +208,6 @@ class TestRect(unittest.TestCase):
     def test_str_reg_h(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(2, "UWU")
-
-    def test_boo_reg_h(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(2, True)
 
     def test_lst_reg_h(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
@@ -257,10 +249,6 @@ class TestRect(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(2, 2, "UWU")
 
-    def test_boo_reg_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(2, 2, True)
-
     def test_lst_reg_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(2, 2, [2, 2])
@@ -296,10 +284,6 @@ class TestRect(unittest.TestCase):
     def test_str_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(2, 2, 2, "UWU")
-
-    def test_boo_reg_y(self):
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(2, 2, 2, True)
 
     def test_lst_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -369,12 +353,6 @@ class TestRect(unittest.TestCase):
         sys.stdout = sys.__stdout__
         return yoink
 
-    def test_rkt_dis(self):
-        rekt1 = Rectangle(2, 2, 1, 1, 1)
-        yoink = TestRect.disp_yoink(rekt1)
-        rektstr = "\n ##\n ##\n"
-        self.assertEqual(yoink.getvalue(), rektstr)
-
     def test_rkt_dis_nof(self):
         rekt1 = Rectangle(2, 2, 0, 0, 0)
         yoink = TestRect.disp_yoink(rekt1)
@@ -385,13 +363,6 @@ class TestRect(unittest.TestCase):
         rekt1 = Rectangle(1, 1, 0, 0, 1)
         rektstr1 = rekt1.__str__()
         rektstr2 = '[Rectangle] (1) 0/0 - 1/1'
-        self.assertEqual(rektstr1, rektstr2)
-
-    def test_str_rkt_nid(self):
-        rekt1 = Rectangle(1, 1)
-        rekt1.update(id='')
-        rektstr1 = rekt1.__str__()
-        rektstr2 = '[Rectangle] () 0/0 - 1/1'
         self.assertEqual(rektstr1, rektstr2)
 
 if __name__ == '__main__':

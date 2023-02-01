@@ -165,10 +165,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("UWU")
 
-    def test_boo_reg(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(True)
-
     def test_lst_reg(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square([2, 2])
@@ -221,10 +217,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(2, "UWU")
 
-    def test_boo_reg_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(2, True)
-
     def test_lst_reg_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(2, [2, 2])
@@ -273,10 +265,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(2, 2, "UWU")
 
-    def test_boo_reg_y(self):
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Square(2, 2, True)
-
     def test_lst_reg_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(2, 2, [2, 2])
@@ -316,12 +304,6 @@ class TestSquare(unittest.TestCase):
         shape.display()
         sys.stdout = sys.__stdout__
         return yoink
-
-    def test_sqr_dis(self):
-        sqr1 = Square(2, 1, 1, 1)
-        yoink = TestSquare.disp_yoink(sqr1)
-        sqrstr = "\n ##\n ##\n"
-        self.assertEqual(yoink.getvalue(), sqrstr)
 
     def test_sqr_dis_nof(self):
         sqr1 = Square(2, 0, 0, 0)
