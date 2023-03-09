@@ -2,9 +2,9 @@
 """Response header value"""
 
 import urllib.request
-"""_summary_"""
+"""request url lib"""
 import sys
-"""_summary_"""
+"""import sys package"""
 
 
 url = sys.argv[1]
