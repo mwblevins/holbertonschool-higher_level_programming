@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Response header value"""
 
 import urllib.request
 import sys
