@@ -13,7 +13,6 @@ if __name__ == '__main__':
     response = requests.get("https://api.github.com/user", auth=auth)
     if response.status_code == 200:
         data = response.json()
-        print("Your user ID is:", data["id"])
+        print(data["id"])
     else:
-        print("Failed to retrieve user information. Status code:",
-              response.status_code)
+        print("None")
