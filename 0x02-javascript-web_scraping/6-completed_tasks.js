@@ -6,7 +6,6 @@ const apiUrl = process.argv[2];
 request(apiUrl, (error, response, body) => {
   if (error) {
     console.error(error);
-    return;
   }
   
   const todos = JSON.parse(body);
@@ -21,8 +20,4 @@ request(apiUrl, (error, response, body) => {
       }
     }
   });
-
-  for (const userId in completedTasksByUser) {
-    console.log(`User ${userId} completed ${completedTasksByUser[userId]} tasks`);
-  }
 });
